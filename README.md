@@ -1,5 +1,5 @@
 # VoiceController
-## Sistem Architecture
+## Architecture
 ```mermaid
 flowchart TD
     A[Start] --> B[Validate User]
