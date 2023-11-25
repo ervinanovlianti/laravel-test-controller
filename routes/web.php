@@ -23,7 +23,10 @@ Route::get('/', function () {
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+// voice routes
+Route::get('voices', [VoiceController::class, 'index']);
+Route::post('voices/vote/{question}', [VoiceController::class, 'voice'])->name('voices');
+
+// other routes
 Route::get('/questions', [QuestionController::class, 'question'])->name('questions');
 Route::post('/question/vote/{question}', [QuestionController::class, 'vote'])->name('questions.vote');
-
-Route::post('voices/vote/{question}', [VoiceController::class, 'voice'])->name('voices');
