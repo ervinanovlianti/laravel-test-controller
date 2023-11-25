@@ -21,4 +21,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 Route::get('/questions', [QuestionController::class, 'question'])->name('questions');
 Route::get('/voices', [VoiceController::class, 'index']);
-Route::post('/voices/{question}', [VoiceController::class, 'voice'])->name('voices');
+Route::post('/voice/{question}', [VoiceController::class, 'voice'])->name('voices');
